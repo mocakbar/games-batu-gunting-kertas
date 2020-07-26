@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <!-- bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Bebas+Neue&family=Barlow+Semi+Condensed&display=swap" rel="stylesheet">
+
+  <!-- stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+  
+  <title>Frontend Mentor | Rock, Paper, Scissors</title>
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+
+  <div class="container mt-5">
+    <div class="row title p-3">
+      <div class="col col-lg-4">
+        <img src="images/logo.svg" alt="">
+      </div>
+      <div class="col col-lg-5"></div>
+      <div class="col col-lg-3">
+        <div class="score">
+          <span class="score-teks">score</span>
+          <span class="jml-hasil"></span>
+        </div>
+      </div>
+    </div>
+    <div class="row pilih-mana">
+      <div class="col col-lg-12">
+        <div class="content"> <!-- content dimulai-->
+          <div class="row">
+            <div class="col pt-5">
+              <div class="kertas float-right">
+                <img src="images/icon-paper.svg" class="paper" alt="">
+              </div>    
+            </div>
+            <div class="col pt-5">
+              <div class="gunting">
+                <img src="images/icon-scissors.svg" class="scissors" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="row pt-3">
+            <div class="batu mx-auto">
+              <img src="images/icon-rock.svg" class="rock" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- rules  -->
+  <div class="container-md">
+    <div class="hasil">
+      <div class="row my-5 ciawi-top">
+        <div class="col"><span class="picked">you picked</span></div>
+        <div class="col"><span class="picked">comp picked</span></div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <div class="player tiga float-right">
+            <img src="" alt="" class="pilihan three">
+          </div>
+        </div>
+        <div class="col gabungan-score-top">
+          <div class="teks-hasil text-white"></div>
+          <div class="ulang" onclick="mainLagi()"><p>play again</p></div>
+        </div>
+        <div class="col">
+          <div class="comp tiga">
+            <img src="" alt="" class="pilihan three">
+          </div>
+        </div>
+      </div>
+      <div class="row my-3 mb-5 ciawi-bottom">
+        <div class="col"><span class="picked">you picked</span></div>
+        <div class="col"><span class="picked">comp picked</span></div>
+      </div>
+      <div class="row">
+        <div class="col gabungan-score-bottom">
+          <div class="teks-hasil text-white"></div>
+          <div class="ulang" onclick="mainLagi()"><p>play again</p></div>
+        </div>
+      </div>
+    </div>
+  <div class="row mt-3 mt-md-5">
+    <div class="col">
+      <div class="rules mx-auto float-md-right">
+        <button type="button" class="btn btn-rules" data-toggle="modal" data-target="#exampleModal">
+          rules
+        </button>        
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Rules</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <img src="images/image-rules.svg" alt="">
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">brindel</a>.
+  </div>
+
+  <!-- js -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="js/main-function.js"></script>
+</body>
+</html>
