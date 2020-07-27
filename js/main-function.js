@@ -108,29 +108,40 @@ function compPilih(player){
   } else if (player == 'paper' && compLik == 'scissors') {
     $('.teks-hasil').html("<span>You Lose</span>");
     kurangScore()
+    playsound('wrong')
   } else if ( player == 'paper' && compLik == 'rock') {
     $('.teks-hasil').html("<span>You Win</span>")
     tambahScore()
+    playsound('win')
   } else if ( player == 'scissors' && compLik == 'paper') {
     $('.teks-hasil').html("<span>You Win</span>")
     tambahScore()
+    playsound('win')
   } else if ( player == 'scissors' && compLik == 'scissors') {
     $('.teks-hasil').html("<span>You Tie</span>")
     $('.jml-hasil').html(jmlScore)
   } else if ( player == 'scissors'&& compLik == 'rock') {
     $('.teks-hasil').html("<span>You Lose</span>")
     kurangScore()
+    playsound('wrong')
   } else if ( player == 'rock' && compLik == 'paper') {
     $('.teks-hasil').html("<span>You Lose</span>")
     kurangScore()
+    playsound('wrong')
   } else if ( player == 'rock' && compLik == 'scissors') {
     $('.teks-hasil').html("<span>You Win</span>")
     tambahScore()
+    playsound('win')
   } else if ( player == 'rock' && compLik == 'rock') {
     $('.teks-hasil').html("<span>You Tie</span>")
     $('.jml-hasil').html(jmlScore)
   } 
 
+}
+
+function playsound(name){
+  let audio = new Audio('sounds/' + name + '.mp3')
+  audio.play()
 }
 
 // hasil score yang dimiliki.
